@@ -12,6 +12,38 @@ const Tarefas = () =>{
         )
     }
 
+    const [dia, setDia] = useState('Seg')
+
+    const mudarDia = () => {
+        if (dia === 'Seg'){
+            setDia('Ter')
+        }
+
+        else if (dia === 'Ter'){
+            setDia('Qua')
+        }
+
+        else if (dia === 'Qua'){
+            setDia('Qui')
+        }
+
+        else if (dia === 'Qui'){
+            setDia('Sex')
+        }
+
+        else if (dia === 'Sex'){
+            setDia('Sab')
+        }
+
+        else if (dia === 'Sab'){
+            setDia('Dom')
+        }
+
+        else if (dia === 'Dom'){
+            setDia('Seg')
+        }
+    }
+
     return(
         <main className='main-tarefas'>
             <div className='conteiner'>
@@ -23,7 +55,7 @@ const Tarefas = () =>{
                 <div className="conteiner-tarefas">
                 <div className="dias">
                     <div className="dia">
-                        <button className="btn-dias" >Seg</button>
+                        <button className="btn-dias" onClick={mudarDia}>{dia}</button>
                     </div>
                     <div className="resumo">
                         <input type="text" className="resumo-input"/>

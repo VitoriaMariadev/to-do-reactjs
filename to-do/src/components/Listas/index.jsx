@@ -5,7 +5,7 @@ const Lista = () => {
         <div className='conteiner-separador'>
             <div className="lista">
                 <div className="efeito">
-                    <a href= '/to-do-reactjs/to-do/tarefas' className='titulo'>Adicionar título</a>
+                    <a href= '/tarefas' className='titulo'>Adicionar título</a>
                 </div>
             </div>
         </div>

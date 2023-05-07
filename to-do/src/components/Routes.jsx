@@ -7,8 +7,8 @@ import Tarefas from './Tarefas'
 const RoutesExistentes = props => (
     <main>
         <Routes>
-            <Route  exact path="/to-do-reactjs/to-do" element={<Inicio/>}></Route>
-            <Route  exact path="/to-do-reactjs/to-do/tarefas" element={<Tarefas/>}></Route>
+            <Route  exact path="/" element={<Inicio/>}></Route>
+            <Route  exact path="/tarefas" element={<Tarefas/>}></Route>
         </Routes>
     </main>
 )
