@@ -1,0 +1,59 @@
+.conteiner-listas{
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteiner-separador{
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.lista{
+    width: 130px;
+    height: 117px;
+    border-radius: 25px;
+    background-color: #ffffff65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 1px 0px #00000060;
+}
+
+.lista:hover{
+    width: 132px;
+    height: 119px;
+}
+
+.efeito{
+    width: 107px;
+    height: 91px;
+    border-radius: 25px;
+    background-color: #90445B65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.efeito:hover{
+    width: 109px;
+    height: 93px;
+}
+
+
+.titulo{
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.titulo:hover{
+    color: rgba(0, 0, 0, 0.801)
+}
