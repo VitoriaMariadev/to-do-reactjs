@@ -7,6 +7,8 @@ export const TarefasLista = () =>{
                 <input type="checkbox" className="tarefas-checar"/>
             </div>
             <input type="text" className="tarefas-input"/>
+            <button>Add</button>
+            <button>Del</button>
         </div>
     )
 }

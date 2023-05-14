@@ -47,6 +47,9 @@ const Tarefas = () =>{
 
     const [carregando, setCarregando] = useState(false)
     const [pegarLista, setPegarLista] = useState('')
+    const [tarefas, setAdicionarTodo] = useState('')
+    const [nome, setTitulo] = useState('')
+
 
     const pegarTarefas = async () => {
         try {
@@ -64,6 +67,36 @@ const Tarefas = () =>{
         pegarTarefas()
     }, [])
 
+    const deletar = async (idDeletar) => {
+        try {
+            const res = await api.delete('/' + idDeletar)
+            console.log(res)
+        }
+        catch{
+            console.log('Deu erro')
+            console.log(idDeletar)
+        }
+    }
+
+    const addToDo = async () => {
+        const data = {
+            nome,
+            dia,
+            tarefas
+        }
+
+        console.log(data)
+
+        try {
+            const res = await api.post('/to-do', data)
+            console.log(res)
+        }
+        catch{
+            console.log('Deu errado')
+        }
+
+    }
+
     return(
         <main className='main-tarefas'>
             <div className='conteiner'>
@@ -78,7 +111,7 @@ const Tarefas = () =>{
                         <button className="btn-dias" onClick={mudarDia}>{dia}</button>
                     </div>
                     <div className="resumo">
-                        <input type="text" className="resumo-input"/>
+                        <input type="text" className="resumo-input" onChange={(e) => setTitulo(e.target.value)}/>
                     </div>
                 </div>
 
@@ -90,11 +123,13 @@ const Tarefas = () =>{
                             <>
                             
                             {pegarLista.map((items, index) => (                            
-                                <div className="espacos">
+                                <div className="espacos" key={index}>
                                     <div className="checar">
                                         <input type="checkbox" className="tarefas-checar"/>
                                     </div>
-                                        <input type="text" className="tarefas-input" placeholder={items.tarefas}></input>
+                                        <input type="text" className="tarefas-input" placeholder={items.tarefas} onChange={(e) => setAdicionarTodo(e.target.value)}></input>
+                                        <button onClick={addToDo}>Add</button>
+                                        <button onClick={() => {deletar(items._id)}}>Del</button>
                                 </div>
                             ))}
 
