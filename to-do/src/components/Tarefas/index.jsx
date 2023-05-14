@@ -1,6 +1,7 @@
 import { TarefasLista } from '../TarefasListas'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './style.css'
+import { api } from "../../Services/api"
 
 const Tarefas = () =>{
 
@@ -44,6 +45,25 @@ const Tarefas = () =>{
         }
     }
 
+    const [carregando, setCarregando] = useState(false)
+    const [pegarLista, setPegarLista] = useState('')
+
+    const pegarTarefas = async () => {
+        try {
+            
+            const res = await api.get("/to-do")
+            setPegarLista(res.data)
+            setCarregando(true)
+        }
+        catch (erro){
+            console.log(erro)
+        }
+    }
+
+    useEffect(() => {
+        pegarTarefas()
+    }, [])
+
     return(
         <main className='main-tarefas'>
             <div className='conteiner'>
@@ -63,8 +83,26 @@ const Tarefas = () =>{
                 </div>
 
                 <div className="tarefas" id="tarefas">
-
                     {addTarefa}
+
+                    {
+                        carregando === true ?(
+                            <>
+                            
+                            {pegarLista.map((items, index) => (                            
+                                <div className="espacos">
+                                    <div className="checar">
+                                        <input type="checkbox" className="tarefas-checar"/>
+                                    </div>
+                                        <input type="text" className="tarefas-input" placeholder={items.tarefas}></input>
+                                </div>
+                            ))}
+
+                            </>
+                        ):(
+                            <h1>Carregando...</h1>
+                        )
+                    }
 
                 </div>
 

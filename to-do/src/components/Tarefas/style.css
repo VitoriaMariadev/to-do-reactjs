@@ -63,6 +63,19 @@
     padding-top: 20px;
     overflow:auto;
     box-shadow: 3px 3px 1px 0px #00000060;
+
+}
+
+.conteiner-tarefas::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+    
+    
+}
+
+.conteiner-tarefas::-webkit-scrollbar-thumb {
+    background-color: #90445b60;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    
 }
 
 .dias{

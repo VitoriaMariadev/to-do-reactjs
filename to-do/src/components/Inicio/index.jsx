@@ -1,5 +1,5 @@
 import Lista from "../Listas/index"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './style.css'
 
 

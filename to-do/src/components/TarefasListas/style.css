@@ -26,6 +26,10 @@ input:hover{
     border-bottom: 2px solid #90445bb0;
 }
 
+::placeholder {
+    color: #000000;
+  }
+
 .checar{
     height: 100%;
     width: 10%;
