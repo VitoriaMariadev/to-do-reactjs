@@ -1,7 +1,12 @@
+body{
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
 main{
     margin: 4%;
-    width: 85%;
-    height: 80%;
+    width: 88vw;
+    height: 80vh;
 }
 
 .conteiner{
@@ -20,7 +25,7 @@ main{
     padding: 2px 2px 2px 2px;
 }
 
-.mais{
+.mais-inicio{
     background-color: #ffffff65;
     border: none;
     border-radius: 20px;
@@ -31,7 +36,43 @@ main{
     box-shadow: 3px 3px 1px 0px #00000060;
 }
 
-.mais:hover{
+.mais-inicio:hover{
     width: 57px;
     height: 57px;
+}
+
+@media screen and (max-width: 375px){
+    main{
+        margin: 4%;
+        width: 88vw;
+        height: auto;
+    }
+
+    .mais-inicio{
+        width: 40px;
+        height: 40px;
+    }
+
+    .mais-inicio:hover{
+        width: 41px;
+        height: 41px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    main{
+        margin: 4%;
+        width: 88vw;
+        height: auto;
+    }
+
+    .mais-inicio{
+        width: 40px;
+        height: 40px;
+    }
+
+    .mais-inicio:hover{
+        width: 41px;
+        height: 41px;
+    }
 }

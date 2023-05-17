@@ -118,13 +118,13 @@ export const Tarefas = () =>{
 
     return(
         <main className='main-tarefas'>
-            <div className='conteiner'>
+            <div className='conteiner-tarefas'>
                 
                 <div className="adicionar">
                     <button className="mais" onClick={add}>+</button>
                 </div>
 
-                <div className="conteiner-tarefas">
+                <div className="conteiner-tarefas-segunda">
                 <div className="dias">
                     <div className="dia">
                         <button className="btn-dias" onClick={mudarDia}>{dia}</button>

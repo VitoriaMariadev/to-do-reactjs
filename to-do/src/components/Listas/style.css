@@ -1,13 +1,13 @@
 .conteiner-listas{
-    width: 80vw;
+    width: 100vw;
     height: 80vh;
     display: flex;
     flex-wrap: wrap;
 }
 
 .conteiner-separador{
-    width: 30vh;
-    height: 30vh;
+    width: 25vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,3 +57,132 @@
 .titulo:hover{
     color: rgba(0, 0, 0, 0.801)
 }
+
+@media screen and (max-width: 375px){
+
+    .conteiner-listas{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap:inherit;
+
+    }
+
+    .conteiner-separador{
+        width: 25vh;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    .lista{
+        width: 150px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #ffffff65;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 1px 0px #00000060;
+        
+    }
+
+    .lista:hover{
+        width: 152px;
+        height: 52px;
+    }
+
+    .efeito{
+        width: 125px;
+        height: 34px;
+        border-radius: 25px;
+        background-color: #90445B65;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .efeito:hover{
+        width: 127px;
+        height: 36px;
+    }
+    
+
+    .titulo{
+        font-size: 0.8rem;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 414px){
+
+    .conteiner-listas{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap:inherit;
+
+    }
+
+    .conteiner-separador{
+        width: 25vh;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    .lista{
+        width: 150px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #ffffff65;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 1px 0px #00000060;
+        
+    }
+
+    .lista:hover{
+        width: 152px;
+        height: 52px;
+    }
+
+    .efeito{
+        width: 125px;
+        height: 34px;
+        border-radius: 25px;
+        background-color: #90445B65;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .efeito:hover{
+        width: 127px;
+        height: 36px;
+    }
+    
+
+    .titulo{
+        font-size: 0.8rem;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+}
+

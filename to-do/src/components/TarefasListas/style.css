@@ -57,3 +57,59 @@ input:hover{
     width: 20px;
     height: 20px;
 }
+
+@media screen and (max-width: 375px){
+    .espacos{
+        margin: 15px;
+        width: 65vw;
+        height: 5vh;
+
+    }
+
+    .tarefas-input{
+        padding: 3px 3px;
+    }
+
+    .check > svg{
+        width: 14px;
+        height: 14px;
+
+    }
+}
+
+@media screen and (max-width: 414px){
+    .espacos{
+        margin: 15px;
+        width: 65vw;
+        height: 5vh;
+
+    }
+
+    .tarefas-input{
+        padding: 3px 3px;
+    }
+
+    .check > svg{
+        width: 14px;
+        height: 14px;
+
+    }
+}
+
+@media screen and (max-width: 820px){
+    .espacos{
+        margin: 15px;
+        width: 58vw;
+        height: 5vh;
+
+    }
+}
+
+@media screen and (max-width: 912px){
+    .espacos{
+        margin: 15px;
+        width: 58vw;
+        height: 5vh;
+
+    }
+}

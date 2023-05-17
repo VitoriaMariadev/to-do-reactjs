@@ -1,5 +1,5 @@
 import Lista from "../Listas/index"
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import './style.css'
 
 
@@ -13,7 +13,7 @@ const Inicio = () => {
         <main>
             <div className="conteiner">
                 <div className="adicionar">
-                    <button className="mais" onClick={Add}>+</button>
+                    <button className="mais-inicio" onClick={Add}>+</button>
                 </div>
                     <div className="conteiner-listas">
                         {ListaAdd}
