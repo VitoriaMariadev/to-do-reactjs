@@ -58,10 +58,6 @@ export const Tarefas = () =>{
         }
     }
 
-    useEffect(() => {
-        pegarTarefas()
-    }, [])
-
     const deletar = async (idDeletar) => {
         try {
             const res = await api.delete('/' + idDeletar)
@@ -115,6 +111,9 @@ export const Tarefas = () =>{
             setCompleto(false)
         }
         }
+    useEffect(() => {
+        pegarTarefas()
+    }, [pegarLista])
 
     return(
         <main className='main-tarefas'>
